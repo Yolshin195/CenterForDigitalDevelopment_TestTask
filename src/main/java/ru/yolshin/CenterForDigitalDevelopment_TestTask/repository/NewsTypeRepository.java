@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import ru.yolshin.CenterForDigitalDevelopment_TestTask.entity.NewsType;
 
+@RepositoryRestResource(collectionResourceRel="newsType", path="newsType")
 public interface NewsTypeRepository extends JpaRepository<NewsType, Long> {
 
   List<NewsType> findByTitle(@Param("title") String title);

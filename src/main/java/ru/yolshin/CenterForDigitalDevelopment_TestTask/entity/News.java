@@ -13,9 +13,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import java.util.Set;
+import lombok.ToString;
 
 @Entity
-@Table(name = "news")
+@Table(name="news")
+@ToString(exclude="newsType")
 public class News {
 
   @Id
